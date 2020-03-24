@@ -4,9 +4,8 @@ from fastapi import Depends, FastAPI
 
 from sqlalchemy.orm import Session
 
-from .database import SessionLocal
-
 from . import crud, schemas
+from .database import SessionLocal
 
 app = FastAPI()
 
