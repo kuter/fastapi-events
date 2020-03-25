@@ -1,13 +1,14 @@
-import sys
+from pathlib import Path
 
-from alembic.command import downgrade, upgrade
-from alembic.config import Config as AlembicConfig
 import pytest
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
+from alembic.command import downgrade, upgrade
+from alembic.config import Config as AlembicConfig
+
 TEST_DB_URL = "sqlite:///./test.db"
-ALEMBIC_INI = "/home/kuter/workspace/github/fastapi-events/alembic.ini"
+ALEMBIC_INI = Path(__file__).parents[2] / "alembic.ini"
 
 
 @pytest.fixture(scope="session")
