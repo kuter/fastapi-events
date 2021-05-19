@@ -2,7 +2,7 @@
 
 # FastAPI Events
 
-## Instalation
+## Installation
 
 Create and activate virtualenv first:
 
